@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Multiplayer Game</h1>
+  <div id="login">
+    <input type="text" id="username" placeholder="Enter username">
+    <button onclick="joinGame()">Join Game</button>
+  </div>
+  <div id="game" style="display:none;">
+    <h2>Welcome, <span id="playerName"></span>!</h2>
+    <p>Online Players: <span id="playersList"></span></p>
+    <button onclick="makeMove()">Make a Move</button>
+    <p id="gameLog"></p>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
